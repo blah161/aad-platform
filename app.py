@@ -9,10 +9,12 @@ TOOLS = []
 tools_dir = "tools"
 
 if os.path.exists(tools_dir):
-for tool in os.listdir(tools_dir):
 
-    if tool.startswith("."):
-        continue
+    for tool in os.listdir(tools_dir):
+
+        if tool.startswith("."):
+            continue
+
         module_path = f"tools.{tool}.routes"
 
         module = importlib.import_module(module_path)
